@@ -15,14 +15,14 @@ y = df['LandAverageTemperature']
 with mlflow.start_run():
 
     params = {
-    "n_estimators":100,
-    "max_depth": 4,
-    "learning_rate": 0.01,
-    "subsample": 0.8,
-    "colsample_bytree": 0.9,
-    "colsample_bylevel": 0.8,
-    "reg_lambda": 0.1,
-    "random_state": 42}
+    "n_estimators":50,
+    "max_depth": 6,
+    "learning_rate": 0.02,
+    "subsample": 0.7,
+    "colsample_bytree": 0.15,
+    "colsample_bylevel": 0.15,
+    "reg_lambda": 0.4,
+    "random_state": 40}
 
     reg = xgb.XGBRegressor(**params)
 

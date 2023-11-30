@@ -5,7 +5,7 @@ import mlflow
 from mlflow.tracking import MlflowClient
 
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("test_model")
+mlflow.set_experiment("model_testing")
 
 df = pd.read_csv('~/MLops_3/datasets/data_test.csv')
 

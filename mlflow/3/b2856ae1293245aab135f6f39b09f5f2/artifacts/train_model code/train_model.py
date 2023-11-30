@@ -16,13 +16,13 @@ with mlflow.start_run():
 
     params = {
     "n_estimators":100,
-    "max_depth": 4,
+    "max_depth": 5,
     "learning_rate": 0.01,
     "subsample": 0.8,
-    "colsample_bytree": 0.9,
-    "colsample_bylevel": 0.8,
-    "reg_lambda": 0.1,
-    "random_state": 42}
+    "colsample_bytree": 0.2,
+    "colsample_bylevel": 0.1,
+    "reg_lambda": 0.7,
+    "random_state": 50}
 
     reg = xgb.XGBRegressor(**params)
 

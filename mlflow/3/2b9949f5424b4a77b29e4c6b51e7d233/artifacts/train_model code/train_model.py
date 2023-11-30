@@ -16,7 +16,7 @@ with mlflow.start_run():
 
     params = {
     "n_estimators":100,
-    "max_depth": 4,
+    "max_depth": 2,
     "learning_rate": 0.01,
     "subsample": 0.8,
     "colsample_bytree": 0.9,

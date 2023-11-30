@@ -1,0 +1,27 @@
+[2023-11-30T17:55:22.068+0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: regression_score.test_model manual__2023-11-30T12:50:13.287014+00:00 [queued]>
+[2023-11-30T17:55:22.079+0500] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: regression_score.test_model manual__2023-11-30T12:50:13.287014+00:00 [queued]>
+[2023-11-30T17:55:22.079+0500] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-11-30T17:55:22.126+0500] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): test_model> on 2023-11-30 12:50:13.287014+00:00
+[2023-11-30T17:55:22.129+0500] {standard_task_runner.py:57} INFO - Started process 4483 to run task
+[2023-11-30T17:55:22.137+0500] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'regression_score', 'test_model', 'manual__2023-11-30T12:50:13.287014+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/regression_score.py', '--cfg-path', '/tmp/tmprnnykxen']
+[2023-11-30T17:55:22.138+0500] {standard_task_runner.py:85} INFO - Job 27: Subtask test_model
+[2023-11-30T17:55:22.217+0500] {task_command.py:416} INFO - Running <TaskInstance: regression_score.test_model manual__2023-11-30T12:50:13.287014+00:00 [running]> on host debian
+[2023-11-30T17:55:22.336+0500] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='admin' AIRFLOW_CTX_DAG_ID='regression_score' AIRFLOW_CTX_TASK_ID='test_model' AIRFLOW_CTX_EXECUTION_DATE='2023-11-30T12:50:13.287014+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-11-30T12:50:13.287014+00:00'
+[2023-11-30T17:55:22.339+0500] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2023-11-30T17:55:22.341+0500] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 ~/MLops_3/scripts/test_model.py']
+[2023-11-30T17:55:22.354+0500] {subprocess.py:86} INFO - Output:
+[2023-11-30T17:55:49.775+0500] {subprocess.py:93} INFO - /home/flow/MLops_3/venv/lib/python3.11/site-packages/pydantic/_internal/_fields.py:149: UserWarning: Field "model_server_url" has conflict with protected namespace "model_".
+[2023-11-30T17:55:49.843+0500] {subprocess.py:93} INFO - 
+[2023-11-30T17:55:49.878+0500] {subprocess.py:93} INFO - You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+[2023-11-30T17:55:49.879+0500] {subprocess.py:93} INFO -   warnings.warn(
+[2023-11-30T17:55:50.273+0500] {subprocess.py:93} INFO - /home/flow/MLops_3/venv/lib/python3.11/site-packages/pydantic/_internal/_config.py:321: UserWarning: Valid config keys have changed in V2:
+[2023-11-30T17:55:50.276+0500] {subprocess.py:93} INFO - * 'schema_extra' has been renamed to 'json_schema_extra'
+[2023-11-30T17:55:50.277+0500] {subprocess.py:93} INFO -   warnings.warn(message, UserWarning)
+[2023-11-30T17:56:29.598+0500] {subprocess.py:93} INFO - 2023/11/30 17:56:29 INFO mlflow.tracking.fluent: Experiment with name 'model_testing' does not exist. Creating a new experiment.
+[2023-11-30T17:56:49.542+0500] {subprocess.py:93} INFO - RMSE = 5.241425579295099
+[2023-11-30T17:56:49.542+0500] {subprocess.py:93} INFO - MAE = 4.237848791562809
+[2023-11-30T17:56:49.542+0500] {subprocess.py:93} INFO - R2 = 0.5526157404371146
+[2023-11-30T17:57:01.577+0500] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-11-30T17:57:02.473+0500] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=regression_score, task_id=test_model, execution_date=20231130T125013, start_date=20231130T125522, end_date=20231130T125702
+[2023-11-30T17:57:03.040+0500] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-11-30T17:57:03.189+0500] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
